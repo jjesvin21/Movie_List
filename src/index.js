@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { MovieContextProvider } from './components/MovieContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <MovieContextProvider>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
+    </MovieContextProvider>
   </React.StrictMode>
 );
 
